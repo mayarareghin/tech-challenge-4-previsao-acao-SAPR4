@@ -50,39 +50,32 @@ O código do treinamento do modelo está disponível também no Google Colab: ht
 0. Pré-requisitos
 
 Instalação do Python 3.11
+Instalação do Docker
 
 1. Clone o Repositório
 ```bash
 git clone https://github.com/mayarareghin/tech-challenge-4-previsao-acao-SAPR4.git
 ```
 
-2. Crie e ative o ambiente virtual
+2. Construa a imagem docker:
 ```bash
-python -m venv venv
-source venv/bin/activate  # no Windows: venv\Scripts\activate
+docker build -t api-previsao-acoes .
 ```
 
-3. Instale as dependências
-```bash
-pip install -r requirements.txt
-```
-
-5. Inicialize o banco de dados com o Alembic:
+3. Inicialize o banco de dados com o Alembic:
 ```bash
 alembic upgrade head
 ```
 
-5. Inicie o servidor FastAPI com Uvicorn:
+4. Execute o contêiner:
 ```bash
-uvicorn app.api.app:app --reload
+docker run -d -p 8000:8000 api-previsao-acoes
 ```
 
-6. Acesse no navegador ou Postamn
+5. Acesse a API no navegador:
 ```arduino
-http://127.0.0.1:8000/docs
+http://localhost:8000/docs
 ```
-
-
 
 ### ☁️ Deploy na Nuvem
 O deploy foi realizado utilizando AWS EC2. Os principais passos incluem:
