@@ -3,19 +3,19 @@ from http import HTTPStatus
 
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
-from jose import JWTError, jwt  # Correto para usar com `python-jose`
+from jose import JWTError, jwt  
 from pwdlib import PasswordHash
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 
-from app.db.database import get_session  # Retorna Session síncrono
+from app.db.database import get_session  
 from app.db.models import User
 from app.core.settings import Settings
 
 settings = Settings()
 pwd_context = PasswordHash.recommended()
 
-# Define o schema OAuth2 com URL do token
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl='auth/token')
 
 
@@ -26,7 +26,7 @@ def create_access_token(data: dict) -> str:
     )
     to_encode.update({'exp': expire})
 
-    # Correção: uso do `jwt.encode` da biblioteca python-jose
+
     encoded_jwt = jwt.encode(
         to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM
     )
@@ -52,7 +52,6 @@ def get_current_user(
     )
 
     try:
-        # Correção: uso correto do `jwt.decode` da python-jose
         payload = jwt.decode(
             token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM]
         )
