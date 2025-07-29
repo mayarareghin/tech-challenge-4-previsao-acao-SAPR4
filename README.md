@@ -86,9 +86,9 @@ O deploy foi realizado utilizando AWS EC2. Os principais passos incluem:
 
 - Instalação de dependências e ambiente virtual;
 
-- Execução da API com uvicorn em segundo plano.
+- Execução da API;
 
-A API está disponível através do link: http://3.148.245.135:8000/docs
+A API está disponível através do link: http://3.14.153.23:8000/docs
 
 ### 🤝 Contribuindo
 Fork este repositório.
