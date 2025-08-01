@@ -15,27 +15,28 @@ Projeto desenvolvido para a pós-graduação em Machine Learning Engineering da 
 
 
 
-### 📊 Redes Neurais LSTM
+## 📊 Redes Neurais LSTM
 
 O projeto utiliza redes neurais do tipo Long Short-Term Memory (LSTM), uma variação das redes neurais recorrentes (RNN) especialmente desenvolvida para lidar com dados sequenciais e séries temporais. As LSTMs são capazes de aprender padrões de longo prazo, superando limitações comuns das RNNs tradicionais, tornando-as altamente eficazes na modelagem de comportamentos temporais complexos, como tendências e sazonalidades presentes nos dados do mercado financeiro.
 
 Neste projeto, as LSTMs foram aplicadas para prever o valor de fechamento das ações da Companhia de Saneamento Parana SANEPAR na bolsa de valores, com base no histórico de preços. O modelo foi treinado utilizando dados diários.. 
 
-O código do treinamento do modelo está disponível também no Google Colab: https://colab.research.google.com/drive/11CINwt-G1YskeQQOo03HMhs9sbwC_o71?usp=sharing
+O código do treinamento do modelo está disponível também no Google Colab: [Colab](https://colab.research.google.com/drive/11CINwt-G1YskeQQOo03HMhs9sbwC_o71?usp=sharing)
 
 
-### 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 - 📦 Python 3.11
 - 🧠 TensorFlow / Keras – Treinamento do modelo LSTM
 - 📊 Pandas, Numpy, Scikit-learn – Manipulação e pré-processamento de dados
 - 📈 yfinance – Coleta de dados financeiros da empresa
 - 🚀 FastAPI – Criação da API REST
 - 🐳 Docker – Containerização da aplicação
-- ☁️ AWS EC2 - Deploy
+- ☁️ AWS EC2 e AWS Cloudwatch - Deploy e monitoramento da aplicação em nuvem
 
 
 
-### 🚀 Funcionalidades da API
+
+## 🚀 Funcionalidades da API
 
 **Previsão do valor das ações SARP4:** Retorno da previsão de valor das ações SARP4 a partir de uma data
 
@@ -43,9 +44,13 @@ O código do treinamento do modelo está disponível também no Google Colab: ht
 
 **Documentação:** Documentação automática com Swagger
 
+## 📍 Documentação do projeto
 
+Confira todos os detalhes e explicações do projeto na documentação: [Documentação em PDF](https://drive.google.com/file/d/1Q2Z5QjMYYyif0PZ0xNESWkkeaYoXwDWe/view)
 
-### 🧪 Como Executar o Projeto
+Veja também o vídeo apresentando o projeto: [Vídeo](https://drive.google.com/file/d/1ehfGJlS6lXTnKiejsAA7LHs7nY4kxczP/view)
+
+## 🧪 Como Executar o Projeto
 
 0. Pré-requisitos
 
@@ -78,15 +83,7 @@ http://localhost:8000/docs
 ```
 
 ### ☁️ Deploy na Nuvem
-O deploy foi realizado utilizando AWS EC2. Os principais passos incluem:
-
-- Configuração da instância;
-
-- Upload dos arquivos da aplicação;
-
-- Instalação de dependências e ambiente virtual;
-
-- Execução da API;
+O deploy foi realizado utilizando AWS EC2. 
 
 A API está disponível através do link: http://3.14.153.23:8000/docs
 
