@@ -82,14 +82,10 @@ docker run -d -p 8000:8000 api-previsao-acoes
 http://localhost:8000/docs
 ```
 
-### ☁️ Deploy na Nuvem
-O deploy foi realizado utilizando AWS EC2. 
-
-A API está disponível através do link: http://3.14.153.23:8000/docs
-
 ### 🤝 Contribuindo
 Fork este repositório.
 Crie sua branch (git checkout -b feature/nova-funcionalidade).
 Faça commit das suas alterações (git commit -m 'Adiciona nova funcionalidade').
 Faça push para sua branch (git push origin feature/nova-funcionalidade).
 Abra um Pull Request. instalar, configurar e usar o projeto. Ele também cobre contribuições, contato, licença e agradecimentos, tornando-o completo e fácil de entender para novos desenvolvedores.
+
